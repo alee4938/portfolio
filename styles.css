@@ -1,0 +1,413 @@
+.roboto-mono-regular {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ---------- Header Bar ---------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: #000;              /* solid black */
+  border-bottom: 2px solid #fff; /* white line */
+  z-index: 10;
+}
+
+header.hidden {
+  transform: translateY(-100%);
+}
+
+.contact-btn {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  transform: translateY(-50%);
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  z-index: 20;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+.contact-btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* ---------- Persistent Logo ---------- */
+.logo-container {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 20; /* stays above header */
+}
+
+.logo-container img {
+  height: 32px;
+  width: auto;
+}
+
+.star {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Page Content ---------- */
+main {
+  padding-top: 100px;
+  padding-left: 16px;
+}
+
+section {
+  max-width: 800px;
+  margin-top: 80px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}
+
+.work-card {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.35s ease;
+}
+
+.work-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-link:hover .work-card {
+  transform: scale(1.1);
+}
+
+.work-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.work-link:hover .work-footer {
+  opacity: 1;
+}
+
+.work-description {
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.work-link:focus .work-card {
+  transform: scale(1.1);
+}
+
+.work-link:focus .work-footer {
+  opacity: 1;
+}
+
+.work-header {
+  position: relative;
+  height: 42px; /* reserved space */
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  z-index: 2;
+}
+
+.work-title {
+  font-weight: 600;
+}
+
+.work-type {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.work-icon {
+  height: 20px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.work-card img:not(.work-icon) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.title-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  border: 0;
+}
+
+.title-card h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.title-card p {
+  font-size: 18px;
+}
+
+.work-image {
+  position: relative;
+  height: calc(100% - 42px);
+}
+
+.work-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 110px 24px 80px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 32px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.back-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.new-tab-btn {
+  margin-left: 4px;
+  margin-bottom: 8px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.new-tab-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.project-title {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.project-meta {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin-bottom: 24px;
+}
+
+.project-media {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.project-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #fff;
+}
+
+.project-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #fff;
+}
+
+.project-description {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+.project-description p {
+  margin-bottom: 16px;
+}
+
+.image-switcher {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.image-switcher img#projectImage {
+  height: 60vh;
+  width: auto;
+  display: block;
+  user-select: none;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.15;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+.gradient-overlay.left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0)
+  );
+}
+
+.gradient-overlay.right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0)
+  );
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: auto;
+  opacity: 0.65;
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.left-arrow {
+  left: 24px;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.right-arrow {
+  right: 24px;
+}
+
+.image-switcher .arrow {
+  width: 30px !important;
+  height: auto !important;
+  max-width: 30px !important;
+  border: none !important;
+}
+
+.image-switcher.hover-left .gradient.left,
+.image-switcher.hover-right .gradient.right {
+  opacity: 0.8;
+}
+
+.image-switcher.hover-left .left-arrow,
+.image-switcher.hover-right .right-arrow {
+  opacity: 1;
+}
+
+.image-frame {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+
+.image-frame img#projectImage {
+  display: block;
+  max-height: 60vh;
+  width: auto;
+}
+
+.image-frame:hover .gradient-overlay {
+  opacity: 0.35;
+}
+
+.image-frame.hover-left .left {
+  opacity: 0.6;
+}
+
+.image-frame.hover-right .right {
+  opacity: 0.6;
+}
+
+#kaltura_player {
+  width: 100%;
+  max-width: 80vw;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #fff;
+  display: block;
+}
