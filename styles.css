@@ -384,6 +384,7 @@ section {
   display: inline-block;
   border: 1px solid #fff;
   overflow: hidden;
+  margin-bottom: 24px;
 }
 
 .image-frame img#projectImage {
