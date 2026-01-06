@@ -225,7 +225,7 @@ section {
 .project-page {
   max-width: 960px;
   margin: 0 auto;
-  padding: 110px 24px 80px;
+  padding: 90px 24px 80px;
 }
 
 .back-btn {
@@ -296,10 +296,13 @@ section {
 .project-description {
   font-size: 16px;
   line-height: 1.6;
-  max-width: 640px;
+  max-width: 912px;
 }
 
 .project-description p {
+  font-weight: 400;
+  font-size: 18px;
+  word-spacing: -0.2em;
   margin-bottom: 16px;
 }
 
@@ -416,4 +419,59 @@ section {
   aspect-ratio: 16 / 9;
   border: 1px solid #fff;
   display: block;
+}
+
+.contact-page {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 28vh;
+}
+
+.contact-name {
+  font-size: 2.2rem;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+}
+
+.contact-role {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-bottom: 2.6rem;
+}
+
+.contact-block {
+  margin-bottom: 2rem;
+}
+
+
+.contact-link {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color:#fff;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-links {
+  font-size: 1.7rem;
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.contact-links a {
+  text-decoration: none;
+  color:#fff;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+.contact-availability {
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
