@@ -11,18 +11,19 @@ window.addEventListener("scroll", () => {
   lastScrollY = window.scrollY;
 });
 
-const images = [
-  "media/maya_room1.jpg",
-  "media/maya_room2.jpg",
-  "media/maya_room3.jpg"
-];
-
-let currentIndex = 0;
-
 const switcher = document.querySelector(".image-switcher");
 const imgEl = document.getElementById("projectImage");
 
 if (switcher && imgEl) {
+  const images = switcher.dataset.images.split(",");
+  let currentIndex = 0;
+
+  // Preload images (prevents flash)
+  images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
   switcher.addEventListener("mousemove", (e) => {
     const rect = switcher.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -51,6 +52,7 @@ if (switcher && imgEl) {
     }
 
     imgEl.style.opacity = 0;
+
     setTimeout(() => {
       imgEl.src = images[currentIndex];
       imgEl.style.opacity = 1;
