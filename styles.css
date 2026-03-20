@@ -26,6 +26,7 @@ header {
   height: 72px;
   background: transparent;
   z-index: 10;
+  pointer-events: none;
 }
 
 header.hidden {
@@ -33,6 +34,7 @@ header.hidden {
 }
 
 .contact-btn {
+  pointer-events: auto;
   position: absolute;
   top: 50%;
   right: 32px;
