@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Graphic Design Intensive – Alex Lee</title>
+  <link rel="icon" href="star.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="roboto-mono-regular">
+
+  <header id="header">
+    <a href="contact.html" class="contact-btn">Contact</a>
+  </header>
+
+  <a href="index.html" class="logo-container">
+    <img src="star.png" alt="Star" class="star">
+    <img src="portfolio_logo.png" alt="Portfolio Logo" style="position:relative;left:-13px;top:7px">
+  </a>
+
+  <main class="project-page">
+
+    <a href="index.html" class="back-btn">← Back to Portfolio</a>
+
+    <h1 class="project-title">Design Intensive Portfolio</h1>
+    <p class="project-meta">Graphic Design / Layout / Typography</p>
+
+    <a href="media/gdi_pdf.pdf" class="new-tab-btn" target="_blank" rel="noopener noreferrer">Open in a new tab</a>
+
+    <div
+      class="image-switcher"
+      data-images="media/gdi/1.png,media/gdi/2.png,media/gdi/3.png,media/gdi/4.png,media/gdi/5.png,media/gdi/6.png"
+    >
+      <div class="image-frame">
+        <img
+          id="projectImage"
+          src="media/gdi/1.png"
+          alt="graphic design intensive"
+        >
+
+        <div class="gradient-overlay left"></div>
+        <div class="gradient-overlay right"></div>
+
+        <img src="switcher_arrow.png" class="arrow left-arrow">
+        <img src="switcher_arrow.png" class="arrow right-arrow">
+      </div>
+    </div>
+
+
+    <div class="project-description">
+      <p>
+        A 6-page portfolio of works I designed in the Pratt Institute's 4 week Graphic Design Summer Intensive program. The irregular letter spacing is designed to create visual movement, inspired by works by Ed Fella.
+      </p>
+
+      <p>
+        Made with Adobe Indesign. Individual works made in Adobe Illustrator, Photoshop, and Indesign.
+      </p>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

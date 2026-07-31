@@ -298,7 +298,6 @@ section {
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  opacity: 0.75;
 }
 
 .new-tab-btn:hover {
@@ -395,6 +394,8 @@ section {
     rgba(0,0,0,0)
   );
 }
+
+
 
 .arrow {
   position: absolute;
